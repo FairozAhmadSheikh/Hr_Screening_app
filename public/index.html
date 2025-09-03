@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI HR Screening – Demo</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>AI-Assisted HR Screening</h1>
+    <p class="subtitle">Apply in minutes. Get instant fit score & FAQ answers.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Apply for Internship</h2>
+      <form id="applyForm">
+        <div class="grid">
+          <label>Full Name
+            <input type="text" name="name" placeholder="Jane Doe" required />
+          </label>
+          <label>Email
+            <input type="email" name="email" placeholder="jane@example.com" required />
+          </label>
+          <label>Phone
+            <input type="tel" name="phone" placeholder="+91 98765 43210" required />
+          </label>
+          <label>Resume (PDF/DOCX)
+            <input type="file" id="resume" accept=".pdf,.doc,.docx" required />
+          </label>
+        </div>
+        <button type="submit" id="submitBtn">Submit Application</button>
+      </form>
+      <p id="applyStatus" class="status"></p>
+    </section>
+
+    <section class="card">
+      <h2>Ask about the role (Gemini)</h2>
+      <div id="chat">
+        <div id="chatLog" class="chat-log" aria-live="polite"></div>
+        <div class="chat-controls">
+          <input type="text" id="userMsg" placeholder="Ask about responsibilities, stipend, timeline..." />
+          <button id="sendBtn">Send</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Demo build. Do not submit real personal data.</small>
+  </footer>
+
+  <script>
+    // ⬇️ Replace with your deployed Apps Script URL (last step of README)
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycby_oGEKrk9lvUgADe7-oKN4Ct24wnBgelQKZHyXFkV072tw550kdiuFxKIJSz-na26_NQ/exec";
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
